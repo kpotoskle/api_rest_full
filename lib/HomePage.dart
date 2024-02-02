@@ -11,7 +11,7 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
-  dynamic dynamicUserData = [];
+  dynamic dynamicUserData ;
   String data = "";
 
   void _getGithubUser() {
@@ -21,6 +21,7 @@ class _homeState extends State<home> {
       setState(() {
         data = reponse.body;
         dynamicUserData = json.decode(data);
+        print(dynamicUserData);
       });
     });
   }
