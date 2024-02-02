@@ -21,8 +21,9 @@ class _homeState extends State<home> {
       setState(() {
         data = reponse.body;
         dynamicUserData = json.decode(data);
-        print(dynamicUserData);
       });
+    }).catchError((error){
+      print(error);
     });
   }
 
@@ -30,6 +31,7 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("Rest Api"),
         leading: Icon(Icons.menu),
         backgroundColor: Colors.green,
       ),
