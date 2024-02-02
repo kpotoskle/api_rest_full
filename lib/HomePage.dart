@@ -32,7 +32,9 @@ class _homeState extends State<home> {
       body: Column(
         children: [
           SizedBox(height: 10,),
-          Center(child: ElevatedButton(onPressed: (){}, child: Text("Afficher"))),
+          Center(child: ElevatedButton(onPressed: (){
+            _getGithubUser();
+          }, child: Text("Afficher"))),
           Text(userData)
         ],
       ),
